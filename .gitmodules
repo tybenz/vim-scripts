@@ -1,0 +1,21 @@
+[submodule "loremipsum"]
+	path = loremipsum
+	url = git@github.com:vim-scripts/loremipsum
+[submodule "vim-matchit"]
+	path = vim-matchit
+	url = git@github.com:tsaleh/vim-matchit.git
+[submodule "powerline"]
+	path = powerline
+	url = git@github.com:Lokaltog/vim-powerline.git
+[submodule "splitjoin"]
+	path = splitjoin
+	url = git@github.com:AndrewRadev/splitjoin.vim
+[submodule "repeat"]
+	path = repeat
+	url = git@github.com:tpope/vim-repeat
+[submodule "surround"]
+	path = surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "sparkup"]
+	path = sparkup
+	url = git@github.com:tristen/vim-sparkup.git
