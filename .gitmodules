@@ -19,3 +19,6 @@
 [submodule "sparkup"]
 	path = sparkup
 	url = git@github.com:tristen/vim-sparkup.git
+[submodule "matchit"]
+	path = matchit
+	url = git@github.com:tsaleh/vim-matchit.git
