@@ -13,3 +13,12 @@
 [submodule "matchit"]
 	path = matchit
 	url = git@github.com:tsaleh/vim-matchit.git
+[submodule "loremipsum"]
+	path = loremipsum
+	url = git@github.com:vim-scripts/loremipsum.git
+[submodule "sparkup"]
+	path = sparkup
+	url = git@github.com:rstacruz/sparkup.git
+[submodule "commentary"]
+	path = commentary
+	url = git@github.com:tpope/vim-commentary.git
