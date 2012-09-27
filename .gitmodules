@@ -22,3 +22,6 @@
 [submodule "commentary"]
 	path = commentary
 	url = git@github.com:tpope/vim-commentary.git
+[submodule "clam"]
+	path = clam
+	url = git@github.com:sjl/clam.vim.git
