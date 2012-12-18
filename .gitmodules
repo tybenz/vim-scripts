@@ -34,3 +34,6 @@
 [submodule "instant-markdown"]
 	path = instant-markdown
 	url = git@github.com:suan/vim-instant-markdown.git
+[submodule "fakeclip"]
+	path = fakeclip
+	url = git@github.com:kana/vim-fakeclip.git
