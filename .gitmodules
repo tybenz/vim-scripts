@@ -37,3 +37,6 @@
 [submodule "fakeclip"]
 	path = fakeclip
 	url = git@github.com:kana/vim-fakeclip.git
+[submodule "ctrlp"]
+	path = ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
