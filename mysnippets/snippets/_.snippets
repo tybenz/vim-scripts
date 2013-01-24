@@ -1,0 +1,29 @@
+snippet anim
+	  -webkit-animation: ${1:animation-name} ${2:5s} ${3:infinite};
+		 -moz-animation: $1 $2 $3;
+		   -o-animation: $1 $2 $3;
+			  animation: $1 $2 $3;
+snippet keyframe
+		@-webkit-keyframes ${1:animation-name} {
+		  	from { ${2:properties} }
+			to { ${3:properties} }
+		}
+		@-moz-keyframes $1 {
+			from { $2 }
+			to { $3 }
+		}
+		@-o-keyframes $1 {
+			from { $2 }
+			to { $3 }
+		}
+		@keyframes $1 {
+			from { $2 }
+			to { $3 }
+		}
+snippet font-face
+		@font-face {
+			font-family: '${1:font-name}';
+			src: url("${2:url}");
+			font-weight: ${3:font-weight};
+			font-style: ${4:font-style};
+		}
