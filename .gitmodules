@@ -37,3 +37,6 @@
 [submodule "ctrlp"]
 	path = ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule "summerfruit256"]
+	path = summerfruit256
+	url = git@github.com:baeuml/summerfruit256.vim.git
