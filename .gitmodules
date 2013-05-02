@@ -34,3 +34,6 @@
 [submodule "zencoding"]
 	path = zencoding
 	url = git@github.com:mattn/zencoding-vim.git
+[submodule "base16"]
+	path = base16
+	url = git://github.com/tybenz/base16-vim.git
