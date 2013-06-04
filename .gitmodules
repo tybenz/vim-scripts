@@ -37,3 +37,9 @@
 [submodule "base16"]
 	path = base16
 	url = git://github.com/tybenz/base16-vim.git
+[submodule "argtextobj"]
+	path = argtextobj
+	url = git@github.com:vim-scripts/argtextobj.vim.git
+[submodule "colorpicker"]
+	path = colorpicker
+	url = git@github.com:abijr/colorpicker.git
