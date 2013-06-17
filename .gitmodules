@@ -43,3 +43,6 @@
 [submodule "colorpicker"]
 	path = colorpicker
 	url = git@github.com:abijr/colorpicker.git
+[submodule "javascript"]
+	path = javascript
+	url = git://github.com/jelera/vim-javascript-syntax.git
