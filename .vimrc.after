@@ -1,0 +1,100 @@
+" set colorscheme based on time of day
+let hour = strftime("%k")
+let hour = substitute(hour, '^\s*\(.\{-}\)\s*$', '\1', '')
+let morning = $TERMINATOR_MORNING
+let evening = $TERMINATOR_EVENING
+color base16-default
+set background=dark
+if (morning + 0) <= hour && hour < (evening + 0)
+  set background=light
+else
+  set background=light
+endif
+noremap <leader>d :set background=dark<CR>
+noremap <leader>l :set background=light<CR>
+
+" Turn off bell
+set noeb vb t_vb=
+au GUIEnter * set vb t_vb=
+
+" Split join keybindings
+nmap <Leader>j :SplitjoinJoin<cr>
+nmap <Leader>s :SplitjoinSplit<cr>
+
+" Key bindings for quicker maximzation of windows
+" Used to toggle sibling panes' visibility
+nmap <Leader>wk <C-W>k<C-W>_
+nmap <Leader>wj <C-W>j<C-W>_
+nmap <Leader>wh <C-W>h<C-W>|
+nmap <Leader>wl <C-W>l<C-W>|
+
+set autoindent
+set hidden
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+
+" Line number settings
+noremap <leader>r :set relativenumber<CR>
+noremap <leader>n :set number<CR>
+noremap <leader>m :set number<CR>:set nonumber<CR>
+
+" Search stuff
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+
+" Turn off highlighting
+nnoremap <leader><space> :noh<cr>
+
+" Move lines up and down
+let @k = 'ddkP'
+let @j = 'ddp'
+
+" Toggle paste mode
+noremap <leader>p :set paste<CR>
+noremap <leader>o :set nopaste<CR>
+filetype indent plugin on
+
+" Clam is for executing terminal commands from within VIM
+nnoremap ! :Clam<space>
+vnoremap ! :ClamVisual<space>
+noremap <leader>! :Clam<space>
+set modelines=1
+
+" Substitute ' with ’
+noremap <leader>s' :%s/\v(\S+)'(\S+)/\1\&\#8217\;\2/<CR>
+
+" delimitMate autocloses parens, quotes, etc.
+" map a key to move cursor after auto-inserted character
+:inoremap <C-]> <ESC>la
+
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+
+  " Enable file type detection
+  filetype on
+
+  " Syntax of these languages is fussy over tabs Vs spaces
+  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Customizations based on house-style (arbitrary)
+  " autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
+  " autocmd FileType css setlocal ts=4 sts=4 sw=4 expandtab
+  " autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+  autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Mustache syntax highlighting should match HTML's
+  autocmd BufNewFile,BufRead *.mustache set filetype=html
+
+  " SCSS syntax highlighting should match CSS's
+  autocmd BufNewFile,BufRead *.scss set filetype=css
+endif
