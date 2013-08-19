@@ -46,3 +46,6 @@
 [submodule "javascript"]
 	path = javascript
 	url = git://github.com/jelera/vim-javascript-syntax.git
+[submodule "github-theme"]
+	path = github-theme
+	url = git://github.com/croaky/vim-colors-github.git
